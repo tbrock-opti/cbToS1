@@ -32,7 +32,13 @@ $cbServices = Get-Service | Where-Object {
 if ($cbServices) {
     'Error, Carbon black is still present'
     Exit 1
-} else {
+}
+
+$s1Services = Get-Service | Where-Object {
+    $_.Name -in ('SentinelAgent', 'SentinelHelperService', 'LogProcessorService', 'SentinelStaticEngine')
+}
+
+if (-not $s1Services) {
     # install Sentinel 1
     # download install file
     $params = @{
