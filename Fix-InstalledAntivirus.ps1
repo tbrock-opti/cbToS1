@@ -36,8 +36,8 @@ if ($cbServices) {
     # install Sentinel 1
     # download install file
     $params = @{
-        Uri     = 'https://github.com/.../raw/SentinelInstaller_windows_64bit_v24_1_6_313.msi'
-        Outfile = 'c:\SentinelInstaller_windows_64bit_v24_1_6_313.msi'
+        Uri     = 'https://raw.githubusercontent.com/tbrock-opti/cbToS1/refs/heads/main/SentinelOneInstaller_windows_64bit_v24_1_6_313.exe'
+        Outfile = 'c:\SentinelOneInstaller_windows_64bit_v24_1_6_313.exe'
     }
     Invoke-WebRequest @params
 
